@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Handling in Javascript</title>
+        <link rel="stylesheet" href="f.css">
+    
+    </head>
+    <body>
+        <section class="p2">
+            <h1>Event Handling</h1>
+            <p id="demo"></p>
+            <button onclick="displayDate()">The time is?</button>
+            <script>
+                function displayDate(){
+                    document.getElementById("demo").innerHTML=Date();
+                }
+            </script>
+        </section>
+        <section class="p1">
+            <script language="Javascript" type="text/Javascript">
+                function clickevent(){
+                    document.write("Hi,My name is Rajesh studying in CSM section in CBIT");
+                }
+            </script>
+            <input type="button" onclick="clickevent()" value="Who's This ?"/>
+        </section>
+        <section class="p3">
+            <h4>Enter Something Here</h4>
+            <input type="text" id="input1" onfocus="focusevent()" placeholder="type here"/>
+            <script>
+                function focusevent(){
+                    document.getElementById("input1").style.background="aqua";
+                }
+            </script>
+        </section>
+        <section class="p4">
+            <button id="myButton">Click me !</button>
+            <div id="mydiv">Move your mouse here!</div>
+            <script>
+                var button = document.getElementById("myButton");
+                button.addEventListener('click',function(){
+                    alert('Button clicked!');
+                });
+                var div = document.getElementById("mydiv");
+                div.addEventListener('mousemove',function(event){
+                    var x=event.clientx;
+                    var y=event.clienty;
+                    div.innerHTML= Mouse co-ordinates- x;'+x',y;'+y';
+                });
+            </script>
+        </section>
+
+
+    </body>
+</html>
